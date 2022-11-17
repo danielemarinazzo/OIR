@@ -1,2 +1,11 @@
 # OIR
 OIR - parametric computation of high-order interactions A Framework for the Time- and Frequency-Domain Assessment of High-Order Interactions 
+
+Mirrored from http://www.lucafaes.net/OIR.html
+
+While the standard network description of complex systems is based on quantifying the link between pairs of system units, higher-order interactions (HOIs) involving three or more units often play a major role in governing the collective network behavior.
+This toolbox introduces an approach to quantify pairwise and HOIs for multivariate rhythmic processes interacting across multiple time scales. The toolbox computes the so-called O-information rate (OIR) as a new metric to assess HOIs for multivariate time series, and implements several functions to decompose the OIR into measures quantifying Granger-causal and instantaneous influences, as well as to expand all measures in the frequency domain. The framework exploits the spectral representation of vector autoregressive and state-space models to assess the synergistic and redundant interaction among groups of processes, both in specific bands of biological interest and in the time domain after whole-band integration.
+The toolbox contains both simulations showing how the spectral OIR can highlight redundant and synergistic HOIs emerging at specific frequencies, which cannot be detected using time-domain measures, and exemplary applications to physiological time series, i.e. heart period, arterial pressure and respiration variability measured in a healthy subject during a protocol of paced breathing, and electrocorticographic signals acquired in an animal experiment during anesthesia.
+The proposed framework allows a hierarchically-organized evaluation of time- and frequency-domain interactions in dynamic networks mapped by multivariate time series, and its high flexibility and scalability make it suitable for the investigation of networks beyond pairwise interactions in neuroscience, physiology and many other fields.
+
+Reference: L. Faes et al., "A New Framework for the Time- and Frequency-Domain Assessment of High-Order Interactions in Networks of Random Processes," in IEEE Transactions on Signal Processing, 2022, doi: 10.1109/TSP.2022.3221892.
