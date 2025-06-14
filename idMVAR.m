@@ -1,5 +1,4 @@
 %% IDENTIFICATION OF STRICTLY CAUSAL MVAR MODEL: Y(n)=A(1)Y(n-1)+...+A(p)Y(n-p)+U(n)
-% (identical to idMVAR funcion of eMVAR toolbox)
 % makes use of autocovariance method (vector least squares)
 
 %%% input:
@@ -15,10 +14,10 @@
 % Z, observation matrix (often optional, useful e.g. for resampling)
 
 
-function [Am,S,Yp,Up,Z,Yb]=oir_idVAR(Y,p,Mode)
+function [Am,S,Yp,Up,Z,Yb]=idMVAR(Y,p,Mode)
 
 % error(nargchk(1,3,nargin));
-if nargin < 3, Mode=0; end % default use least squares estimate
+% if nargin < 3, Mode=0; end % default use least squares estimate
 % if nargin < 2, p=10; end % default model order
 
 [M,N]=size(Y);
@@ -48,5 +47,3 @@ Yp=[NaN*ones(M,p) Yp]; % Vector of predicted data
 
 Up=Y-Yp; Up=Up(:,p+1:N); % residuals of strictly causal model
 S=cov(Up');
-
-
